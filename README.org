@@ -12,3 +12,13 @@ Requirements:
 + selenium 需要安装 selenium 的 python 客户端,同时系统中要有 Xvfb 等 X 工具(若需
   要在 Server 环境下使用时),同时,它还依赖于本地的浏览器,如 Firefox, Chrome 等.
 + PyQt4 需要搭建 Qt 环境,这个相对麻烦,安装时有个地方需要挪动一下库的位置.
+
+Xvfb 的使用方式:
+在我的系统 Slackware14.0 中,可通过如下方式来使用:
+
+$ Xvfb -fp /usr/X11R6/fonts/TIF/ :100 -screen 0 7800x6400x24 &
+$ export DISPLAY=:100
+
+运行上述命令后就可以不打开 X 的情况下模拟 X 环境.
+(*-fp* 参数指明字体路径,这个可加可不加,如果不加时遇到问题,最好加上. *:100* 中的
+数字可以随意设置,只要和下面的 *DISPLAY* 对应就行.分辨率的大小可以随意设置 )
