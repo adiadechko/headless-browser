@@ -9,9 +9,10 @@
   以使用.
 
 Requirements:
-+ selenium 需要安装 selenium 的 python 客户端,同时系统中要有 Xvfb 等 X 工具(若需
-  要在 Server 环境下使用时),同时,它还依赖于本地的浏览器,如 Firefox, Chrome 等.
-+ PyQt4 需要搭建 Qt 环境,这个相对麻烦,安装时有个地方需要挪动一下库的位置.
++ 二者都需要模拟 X 环境,需要使用 Xvfb 这类提供 X 环境的工具 
++ selenium 需要安装 selenium 的 python 客户端,依赖于本地的浏览器,如 Firefox,
+  Chrome 等
++ PyQt4 需要搭建 Qt 环境,这个相对麻烦,安装时有个地方需要挪动一下库的位置
 
 Xvfb 的使用方式:
 在我的系统 Slackware14.0 中,可通过如下方式来使用,其它的系统改下字体路径可直接使
