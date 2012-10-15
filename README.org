@@ -1,0 +1,14 @@
+分别基于 selenium 和 PyQt4 中的 QtWebKit 实现对包含 AJAX 请求的页面的网页的抓取.
+
+都会出现的问题:
++ 占用系统资源多,因为本质上都是在内存中打开一个浏览器来解决页面,只是 selenium 打
+  开的是本地的浏览器,而 QtWebKit 是打开 WebKit 内核,故后者会比前者节省资源,但前
+  者的使用更简单些.
++ 若不设置特殊参数,二者都是只抓取 "一屏", selenium 的解决方法是通过命令行工具
+  Xvfb 设置分辨率的大小,已经测试通过,而 QtWebKit 还在探索中,觉得有内置的 API 可
+  以使用.
+
+Requirements:
++ selenium 需要安装 selenium 的 python 客户端,同时系统中要有 Xvfb 等 X 工具(若需
+  要在 Server 环境下使用时),同时,它还依赖于本地的浏览器,如 Firefox, Chrome 等.
++ PyQt4 需要搭建 Qt 环境,这个相对麻烦,安装时有个地方需要挪动一下库的位置.
