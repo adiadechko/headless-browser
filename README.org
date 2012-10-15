@@ -14,9 +14,17 @@ Requirements:
 + PyQt4 需要搭建 Qt 环境,这个相对麻烦,安装时有个地方需要挪动一下库的位置.
 
 Xvfb 的使用方式:
+<<<<<<< HEAD
+在我的系统 Slackware14.0 中,可通过如下方式来使用,其它的系统改下字体路径可直接使
+用:
+
+$ Xvfb -fp /usr/X11R6/fonts/TIF/ :100 -screen 0 7800x6400x24 &
+
+=======
 在我的系统 Slackware14.0 中,可通过如下方式来使用:
 
 $ Xvfb -fp /usr/X11R6/fonts/TIF/ :100 -screen 0 7800x6400x24 &
+>>>>>>> 5f1883084ad521b76481ac5215bc79dd3cbe7fc4
 $ export DISPLAY=:100
 
 运行上述命令后就可以不打开 X 的情况下模拟 X 环境.
